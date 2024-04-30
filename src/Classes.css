@@ -1,0 +1,79 @@
+.classes {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.classes > button {
+    width: 225px;
+    height: 325px;
+    margin: 20px;
+    background-position: 50%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.classes > button > span {
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    inset: auto auto 0 0;
+}
+
+.barbarian {
+    background: url(./assets/classes/barbarian.png);
+}
+
+.bard {
+    background: url(./assets/classes/bard.png);
+}
+
+.cleric {
+    background: url(./assets/classes/cleric.png);
+}
+
+.druid {
+    background: url(./assets/classes/druid.png);
+}
+
+.fighter {
+    background: url(./assets/classes/fighter.png);
+}
+
+.monk {
+    background: url(./assets/classes/monk.png);
+}
+
+.paladin {
+    background: url(./assets/classes/paladin.png);
+}
+
+.ranger {
+    background: url(./assets/classes/ranger.png);
+}
+
+.rogue {
+    background: url(./assets/classes/rogue.png);
+}
+
+.sorcerer {
+    background: url(./assets/classes/sorcerer.png);
+}
+
+.warlock {
+    background: url(./assets/classes/warlock.png);
+}
+
+.wizard {
+    background: url(./assets/classes/wizard.png);
+}
