@@ -1,0 +1,13 @@
+.equipment {
+  margin-bottom: 10px;
+}
+
+.block {
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 25px;
+}

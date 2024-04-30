@@ -1,9 +1,8 @@
-# DnD-Characters-Builder
+# React + Vite
 
-A group of three people who make a DnD characters builder for a school project
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Members
+Currently, two official plugins are available:
 
-* **Axel Remont** [_TruitosTV_](https://github.com/TruitosTV)
-* **Landry Maillard** [_Landry1602_](https://github.com/Landry1602)
-* **Frédérique Pignol** [_fred-rx_](https://github.com/fred-rx)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
