@@ -1,4 +1,4 @@
-import '../Races.css'
+// import '../Races.css'
 import { useRaces } from '../contexts/RacesContext'
 
 function Races({setRace}) {
