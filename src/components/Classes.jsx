@@ -1,5 +1,5 @@
-import '../Classes.css'
-import { useClasses } from '../contexts/ClassesContext'
+// import '../Classes.css'
+import { useClasses } from '../contexts/ClasseContext'
 
 function Classes({setClasse}) {
 
