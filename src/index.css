@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #646CFF;
+  --secondary-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --button-color: #1a1a1a;
+  --button-hover: #646CFF;
+  --font-family: 'Inter', system-ui, 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
