@@ -1,5 +1,4 @@
 import './App.css'
-import DisplayCreation from './components/DisplayCreation'
 import Equipment from './components/Equipment'
 import AbilityScore from "./components/AbilityScore";
 import Character from './components/Character';
@@ -7,7 +6,7 @@ import image from "./images/DnD-Symbol.png";
 import Races from './components/Races';
 import Classes from './components/Classes';
 import { RacesProvider } from './contexts/RacesContext';
-import { ClassesProvider } from './contexts/ClasseContext';
+import { ClassesProvider } from './contexts/ClassesContext';
 
 function Logo() {
   return <img className="LogoPNG" src={image} alt="Logo" />;
@@ -46,7 +45,6 @@ function App() {
     </div>
   </div>
   <div className='landry'>
-    <DisplayCreation/>
     <Equipment/>
     <Character/>
   </div>

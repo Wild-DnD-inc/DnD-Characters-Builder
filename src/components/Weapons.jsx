@@ -1,26 +1,7 @@
-import { useEffect, useState } from "react";
+import { useWeapons } from "../contexts/WeaponsContext";
 
-const BASE_URL = 'https://www.dnd5eapi.co'
-
-function Weapons() {
-    const [meleeWeapon, setMeleeWeapon] = useState([])
-    const [rangedWeapon, setRangedWeapon] = useState([])
-
-    useEffect(() => {
-        const fetchWeaponData = async () => {
-            const meleeResponse = await fetch(BASE_URL + "/api/equipment-categories/melee-weapons");
-            const meleeData = await meleeResponse.json();
-            const meleeNames = meleeData.equipment.map(item => item.name);
-            setMeleeWeapon(meleeNames);
-
-            const rangedResponse = await fetch(BASE_URL + "/api/equipment-categories/ranged-weapons");
-            const rangedData = await rangedResponse.json();
-            const rangedNames = rangedData.equipment.map(item => item.name);
-            setRangedWeapon(rangedNames);
-        }
-
-        fetchWeaponData();
-    }, []);
+function Weapons({ setWeapons }) {
+    const { meleeWeapons, rangedWeapons } = useWeapons();
 
     return (
         <>
@@ -30,13 +11,13 @@ function Weapons() {
                 <select id="primary-weapon" name="primary-weapon">
                     <option value="">--Without weapon--</option>
                     <optgroup label="Melee Weapon">
-                        {meleeWeapon.map((item, index) => (
-                            <option key={index} value={item}>{item}</option>
+                        {meleeWeapons.map((weapon, index) => (
+                            <option key={index} value={weapon.index}>{weapon.name}</option>
                         ))}
                     </optgroup>
                     <optgroup label="Ranged Weapon">
-                        {rangedWeapon.map((item, index) => (
-                            <option key={index} value={item}>{item}</option>
+                        {rangedWeapons.map((weapon, index) => (
+                            <option key={index} value={weapon.index}>{weapon.name}</option>
                         ))}
                     </optgroup>
                 </select>
@@ -46,20 +27,19 @@ function Weapons() {
                 <select id="secondary-weapon" name="secondary-weapon">
                     <option value="">--Without weapon--</option>
                     <optgroup label="Melee Weapon">
-                        {meleeWeapon.map((item, index) => (
-                            <option key={index} value={item}>{item}</option>
+                        {meleeWeapons.map((weapon, index) => (
+                            <option key={index} value={weapon.index}>{weapon.name}</option>
                         ))}
                     </optgroup>
                     <optgroup label="Ranged Weapon">
-                        {rangedWeapon.map((item, index) => (
-                            <option key={index} value={item}>{item}</option>
+                        {rangedWeapons.map((weapon, index) => (
+                            <option key={index} value={weapon.index}>{weapon.name}</option>
                         ))}
                     </optgroup>
                 </select>
             </div>
         </>
     )
-
 }
 
-export default Weapons
+export default Weapons;
