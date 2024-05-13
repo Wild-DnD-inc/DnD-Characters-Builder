@@ -48,6 +48,18 @@ function App() {
     <Equipment/>
     <Character/>
   </div>
+  <div className='finalCard'>
+    <h1>Name</h1>
+    <h3>race</h3>
+    <h3>classe</h3>
+    <h3>ability</h3>
+    <h2>Equipements</h2>
+    <h3>armor</h3>
+    <h3>weapon</h3>
+    <h3>tools</h3>
+    <h3>gear</h3>
+
+  </div>
     </>
   )
 }
