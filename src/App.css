@@ -1,0 +1,20 @@
+.equipment {
+  margin-bottom: 10px;
+}
+
+.block {
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 25px;
+}
+
+.finalCard{
+  background: url(./images/fond-DnD.png);
+  width: 950px;
+  height: 530px;
+  margin-left: 200px;
+}
