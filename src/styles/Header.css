@@ -1,0 +1,45 @@
+header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+}
+
+.app-icon {
+    width: 150px;
+    margin-right: 1rem;
+}
+
+h1 {
+    margin-top: 0.5rem;
+    font-family: var(--font-dnd);
+    font-size: 3em;
+}
+
+nav {
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav > a {
+    padding: 1rem;
+    font-family: var(--font-dnd);
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--text-color);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-decoration: none;
+    transition: background-color 0.25s;
+    cursor: pointer;
+}
+    nav > a:hover,
+    nav > a:focus {
+        background: var(--secondary-color);
+    }
