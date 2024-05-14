@@ -3,13 +3,16 @@ import Avatar from './Avatar';
 import { useEquipment } from "../contexts/EquipmentContext";
 import { useAlignment } from '../contexts/AlignmentContext';
 import { useCharacter } from '../contexts/CharacterContext';
+import { useRaces } from '../contexts/RacesContext';
+import { useClasses } from '../contexts/ClassesContext';
 
 function Final() {
+    const { race } = useRaces();
+    const { classe } = useClasses();
     const { primaryWeapon, secondaryWeapon, armor, shield, selectedTools, selectedGears } = useEquipment();
     const { selectedAlignment } = useAlignment();
     const { characterInfo } = useCharacter();
-    const race = 'human'
-    const classe = 'paladin'
+    
  
     return (
         <>

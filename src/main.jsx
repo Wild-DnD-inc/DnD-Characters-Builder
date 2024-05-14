@@ -12,6 +12,8 @@ import Classes from './pages/Classes.jsx'
 import Abilities from './pages/Abilities.jsx'
 import Stats from './pages/Stats.jsx'
 import Equipments from './pages/Equipments.jsx'
+import Characters from './pages/Character.jsx'
+import Resume from './pages/Resume.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,8 +40,16 @@ const router = createBrowserRouter([
             element: <Stats/>
           },
           {
-            path: "/equipements",
+            path: "/equipments",
             element: <Equipments/>
+          },
+          {
+            path: "/character",
+            element: <Characters/>
+          },
+          {
+            path: "/resume",
+            element: <Resume/>
           }
         ]
       },
