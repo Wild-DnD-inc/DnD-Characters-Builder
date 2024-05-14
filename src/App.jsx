@@ -7,6 +7,11 @@ import Races from './components/Races';
 import Classes from './components/Classes';
 import { RacesProvider } from './contexts/RacesContext';
 import { ClassesProvider } from './contexts/ClassesContext';
+import Final from './components/Final';
+import { EquipmentProvider } from './contexts/EquipmentContext';
+import { AlignmentProvider } from './contexts/AlignmentContext';
+import { CharacterProvider } from './contexts/CharacterContext';
+
 
 function Logo() {
   return <img className="LogoPNG" src={image} alt="Logo" />;
@@ -44,10 +49,18 @@ function App() {
       <AbilityScore name="Charisma" score={0} modifier={0} />
     </div>
   </div>
-  <div className='landry'>
+  <div>
+    <CharacterProvider>
+    <AlignmentProvider>
+    <EquipmentProvider>
     <Equipment/>
+    <Final/>
+    </EquipmentProvider>
     <Character/>
+    </AlignmentProvider>
+    </CharacterProvider>
   </div>
+  
     </>
   )
 }

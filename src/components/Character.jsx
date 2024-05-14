@@ -1,20 +1,17 @@
-import { useEffect, useState } from "react"
+import { useAlignment } from "../contexts/AlignmentContext";
+import { useCharacter } from "../contexts/CharacterContext";
 
-const BASE_URL = 'https://www.dnd5eapi.co'
 
 function Character() {
-    const [align, setAlign] = useState([])
+    const { alignments, selectedAlignment, handleAlignmentChange } = useAlignment();
 
-    useEffect(() => {
-        const fetchAlign = async () => {
-            const alignResponse = await fetch(BASE_URL + "/api/alignments");
-                const alignData = await alignResponse.json();
-                const alignNames = alignData.results.map(item => item.name);
-                setAlign(alignNames);
-        }
+    const { characterInfo, updateCharacterInfo } = useCharacter();
 
-        fetchAlign();
-    }, []);
+    const handleInputChange = (event) => {
+        const { id, value } = event.target;
+        updateCharacterInfo({ [id]: value });
+    };
+
 
     return (
         <div>
@@ -23,44 +20,45 @@ function Character() {
                 <div>
                     <p>Define the last details of your character</p>
                     <h3>Name</h3>
-                    <input type="text" id="name" maxLength="24" placeholder="Character Name"/>
+                    <input type="text" id="name" maxLength="24" placeholder="Character Name" onChange={handleInputChange} value={characterInfo.name}/>
                         <h3>Gender / Alignment / Real Age</h3>
-                        <select id="sex">
-                            <option value="0">Male</option>
-                            <option value="1">Female</option>
+                        <select id="gender" onChange={handleInputChange} value={characterInfo.gender}>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
                             </select>
-                        <select id="align">
+                        <select id="align" value={selectedAlignment} onChange={handleAlignmentChange}>
                             <option value="">--Alignment--</option>
-                            {align.map((item, index) => (
+                            {alignments.map((item, index) => (
                                 <option key={index} value={item}>{item}</option>
                             ))}
                         </select>
-                        <input type="number" id="age" maxLength="16" placeholder="20"/>
+                        <input type="number" id="age" maxLength="16" placeholder="20" onChange={handleInputChange} value={characterInfo.age}/>
                         <h3>Height / Weight / XP</h3>
-                        <input type="text" id="height" maxLength="16" placeholder="1.8 m"/>
-                        <input type="text" id="weight" maxLength="16" placeholder="85 Kg"/>
-                        <input type="text" id="XP" maxLength="16" placeholder="0"/>
+                        <input type="text" id="height" maxLength="16" placeholder="1.8 m" onChange={handleInputChange} value={characterInfo.height}/>
+                        <input type="text" id="weight" maxLength="16" placeholder="85 Kg" onChange={handleInputChange} value={characterInfo.weight}/>
+                        <input type="text" id="XP" maxLength="16" placeholder="0" onChange={handleInputChange} value={characterInfo.xp}/>
                         <h3>Eyes / Skin / Hair</h3>
-                        <input type="text" id="eyes" maxLength="16" placeholder="Eyes"/>
-                        <input type="text" id="skin" maxLength="16" placeholder="Skin"/>
-                        <input type="text" id="hair" maxLength="16" placeholder="Hair"/>
+                        <input type="text" id="eyes" maxLength="16" placeholder="Eyes" onChange={handleInputChange} value={characterInfo.eyes}/>
+                        <input type="text" id="skin" maxLength="16" placeholder="Skin" onChange={handleInputChange} value={characterInfo.skin}/>
+                        <input type="text" id="hair" maxLength="16" placeholder="Hair" onChange={handleInputChange} value={characterInfo.hair}/>
                         <h3>Appearance</h3>
-                        <textarea id="appearance" rows="4" placeholder="A quick description of your appearance"></textarea>
+                        <textarea id="appearance" rows="4" placeholder="A quick description of your appearance" onChange={handleInputChange} value={characterInfo.appearance}></textarea>
                         <h3>Character Backstory</h3>
-                        <textarea id="history" rows="8" placeholder="You can tell your story here"></textarea>
+                        <textarea id="history" rows="8" placeholder="You can tell your story here" onChange={handleInputChange} value={characterInfo.history}></textarea>
                 </div>
                 <div>
                     <h3>Personality traits</h3>
-                    <textarea id="traits" rows="3"></textarea>
+                    <textarea id="traits" rows="3" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.traits}></textarea>
                     <h3>Ideals</h3>
-                    <textarea id="ideals" rows="2"></textarea>
+                    <textarea id="ideals"  rows="2" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.ideals}></textarea>
                     <h3>Bonds</h3>
-                    <textarea id="bonds" rows="2"></textarea>
-                    <h3>Flaws</h3><textarea id="flaws" rows="2"></textarea>
+                    <textarea id="bonds" rows="2" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.bonds}></textarea>
+                    <h3>Flaws</h3>
+                    <textarea id="flaws" rows="2" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.flaws}></textarea>
                     <h3>Allies &amp; Organizations</h3>
-                    <textarea id="allies" rows="3"></textarea>
+                    <textarea id="allies" rows="3" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.allies}></textarea>
                     <h3>Additional Features</h3>
-                    <textarea id="extraFeatures" rows="4"></textarea>
+                    <textarea id="extraFeatures" rows="4" onChange={handleInputChange} value={characterInfo.extraFeatures}></textarea>
                 </div>
             </div>
         </div>
