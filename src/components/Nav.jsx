@@ -1,4 +1,4 @@
-import { Link, redirect } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Nav() {
 
@@ -7,7 +7,6 @@ function Nav() {
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
-            <redirect to='/'/>
         </nav>
     )
 

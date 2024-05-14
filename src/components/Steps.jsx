@@ -1,4 +1,4 @@
-import { Link, redirect } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useSteps } from "../contexts/StepsContext"
 
 function Steps() {
@@ -11,8 +11,7 @@ function Steps() {
             <Link to="/classes">Classes<span>{steps.classe}</span></Link>
             <Link to="/abilities">Abilities<span>{''}</span></Link>
             <Link to="/stats">Stats<span>{''}</span></Link>
-            {/* <Link to="/equipments">Equipments<span>{''}</span></Link> */}
-            <redirect to='/'/>
+            <Link to="/equipments">Equipments<span>{''}</span></Link>
         </section>
     )
 

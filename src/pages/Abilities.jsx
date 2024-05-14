@@ -1,16 +1,27 @@
-import AbilityScore from '../components/AbilityScore'
+import '../styles/Abilities.css'
+import { AbilitiesProvider } from "../contexts/AbilitiesContext";
+import AbilityScore from '../components/AbilityScore';
+
+const names = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']
 
 function Abilities() {
 
     return (
-        <section className='ability'>
-            <AbilityScore name="Strength" score={0} modifier={0}/>
-            <AbilityScore name="Dexterity" score={0} modifier={0}/>
-            <AbilityScore name="Constitution" score={0} modifier={0}/>
-            <AbilityScore name="Intelligence" score={0} modifier={0}/>
-            <AbilityScore name="Wisdom" score={0} modifier={0}/>
-            <AbilityScore name="Charisma" score={0} modifier={0}/>
-        </section>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td><span>Score</span><span>Modifier</span></td>
+                </tr>
+            </thead>
+            <tbody>
+                <AbilitiesProvider>
+                    {names.map(name => 
+                        <AbilityScore key={name.toLowerCase()} name={name}/>
+                    )}
+                </AbilitiesProvider>
+            </tbody>
+        </table>
     )
 
 }

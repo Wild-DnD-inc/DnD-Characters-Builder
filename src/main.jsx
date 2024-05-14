@@ -11,6 +11,7 @@ import Races from './pages/Races.jsx'
 import Classes from './pages/Classes.jsx'
 import Abilities from './pages/Abilities.jsx'
 import Stats from './pages/Stats.jsx'
+import Equipments from './pages/Equipments.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,9 +37,10 @@ const router = createBrowserRouter([
             path: "/stats",
             element: <Stats/>
           },
-          // {
-          //   path: "/equipements"
-          // }
+          {
+            path: "/equipements",
+            element: <Equipments/>
+          }
         ]
       },
       {
