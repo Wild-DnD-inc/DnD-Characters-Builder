@@ -26,6 +26,7 @@ export const CharacterProvider = ({ children }) => {
     });
 
     const updateCharacterInfo = (newInfo) => {
+        console.log("Updating character information:", newInfo)
         setCharacterInfo((prevCharacterInfo) => ({
             ...prevCharacterInfo,
             ...newInfo
