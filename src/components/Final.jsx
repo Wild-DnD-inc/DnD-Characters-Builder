@@ -67,17 +67,19 @@ function Final() {
     <div className='resume-container'> 
         <h2>Resume</h2>
     <p className='resume'>
-        {steps.characterInfo.name} is a {steps.race} {steps.classe}. {steps.characterInfo.gender === 'male' ? ' He' : ' She'} is {steps.characterInfo.age} years old and has {steps.characterInfo.hair} hair. 
-        {steps.characterInfo.gender === 'male' ? ' His' : ' Her'} skin is {steps.characterInfo.skin} and {steps.characterInfo.gender === 'male' ? ' he' : ' she'} has {steps.characterInfo.eyes} eyes.
-        {steps.characterInfo.gender === 'male' ? ' He' : ' She'} is wearing a {steps.armor} {steps.primaryWeapon === '' ? '' : ` and fights with a ${steps.primaryWeapon}`}
-        {steps.secondaryWeapon === '' ? '' : ` and a ${steps.secondaryWeapon}`}. 
-        {steps.shield === '' ? '' : `${steps.characterInfo.gender === 'male' ? ' He' : ' She'} has a Shield too. `}
-        {steps.characterInfo.name} is known for {steps.characterInfo.gender === 'male' ? ' his' : ' her'} {steps.selectedAlignment} behaviour. 
-        {steps.characterInfo.traits === '' ? '' : `${steps.characterInfo.gender === 'male' ? ' He' : ' She'} is ${steps.characterInfo.traits}. `}
-        {steps.characterInfo.flaws === '' ? '' : `But ${steps.characterInfo.gender === 'male' ? ' he' : ' she'} has flaws as ${steps.characterInfo.gender === 'male' ? ' he' : ' she'} is ${steps.characterInfo.flaws}. `}
-        {steps.characterInfo.allies === '' ? '' : `Hopefully, ${steps.characterInfo.name} can count on ${steps.characterInfo.gender === 'male' ? ' his' : ' her'} allies such as ${steps.characterInfo.allies}.`}
-        {steps.characterInfo.bonds === '' ? '' : `${steps.characterInfo.name} has strong bonds with ${steps.characterInfo.bonds}`}
-        Finally, here's a bit of {steps.characterInfo.name}'s history: {steps.characterInfo.history}
+        {steps.characterInfo.name === '' && steps.characterInfo.age === '' && steps.race === '' && steps.classe === '' ? '' : `
+        ${steps.characterInfo.name} is a ${steps.race} ${steps.classe}. ${steps.characterInfo.gender === 'male' ? ' He' : ' She'} is ${steps.characterInfo.age} years old ${steps.characterInfo.hair === '' ? '' : `and has ${steps.characterInfo.hair} hair.`} 
+        ${steps.characterInfo.skin === '' ? '' : `${steps.characterInfo.gender === 'male' ? ' His' : ' Her'} skin is ${steps.characterInfo.skin}`} ${steps.characterInfo.eyes === '' ? '' : `and ${steps.characterInfo.gender === 'male' ? ' he' : ' she'} has ${steps.characterInfo.eyes} eyes.`}
+        ${steps.armor === '' ? '' : `${steps.characterInfo.gender === 'male' ? ' He' : ' She'} is wearing a ${steps.armor}`} ${steps.primaryWeapon === '' ? '' : ` and fights with a ${steps.primaryWeapon}`}
+        ${steps.secondaryWeapon === '' ? '' : ` and a ${steps.secondaryWeapon}`}. 
+        ${steps.shield === '' ? '' : `${steps.characterInfo.gender === 'male' ? ' He' : ' She'} has a Shield too. `}
+        ${steps.alignment === '' ? '' : `${steps.characterInfo.name} is known for ${steps.characterInfo.gender === 'male' ? ' his' : ' her'} ${steps.alignment} behaviour. `} 
+        ${steps.characterInfo.traits === '' ? '' : `${steps.characterInfo.gender === 'male' ? ' He' : ' She'} is ${steps.characterInfo.traits}. `}
+        ${steps.characterInfo.flaws === '' ? '' : `But ${steps.characterInfo.gender === 'male' ? ' he' : ' she'} has flaws as ${steps.characterInfo.gender === 'male' ? ' he' : ' she'} is ${steps.characterInfo.flaws}. `}
+        ${steps.characterInfo.allies === '' ? '' : `Hopefully, ${steps.characterInfo.name} can count on ${steps.characterInfo.gender === 'male' ? ' his' : ' her'} allies such as ${steps.characterInfo.allies}.`}
+        ${steps.characterInfo.bonds === '' ? '' : `${steps.characterInfo.name} has strong bonds with ${steps.characterInfo.bonds}`}
+        ${steps.characterInfo.history === '' ? '' : `Finally, here's a bit of ${steps.characterInfo.name}'s history: ${steps.characterInfo.history}`}
+        `}
     </p>
     </div>
     </>
