@@ -6,7 +6,7 @@ function Proficiencies() {
 
     return (
         <div className="proficiencies-component">
-            <label htmlFor="proficiencies">Proficiencies</label>
+            <h3>Proficiencies</h3>
             <select name="proficiencies" id="proficiencies" defaultValue={''}>
                 <option value="">--Not Selected--</option>
                 {proficiencies.map((background, index) => 

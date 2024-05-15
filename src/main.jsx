@@ -10,7 +10,7 @@ import Contact from './pages/Contact.jsx'
 import Races from './pages/Races.jsx'
 import Classes from './pages/Classes.jsx'
 import Abilities from './pages/Abilities.jsx'
-import Stats from './pages/Stats.jsx'
+import Spells from './pages/Spells.jsx'
 import Equipments from './pages/Equipments.jsx'
 import Characters from './pages/Character.jsx'
 import Resume from './pages/Resume.jsx'
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
             element: <Abilities/>
           },
           {
-            path: "/stats",
-            element: <Stats/>
+            path: "/spells",
+            element: <Spells/>
           },
           {
             path: "/equipments",

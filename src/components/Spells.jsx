@@ -6,7 +6,7 @@ function Spells({level}) {
 
     return (
         <div className="spells-component">
-            <label htmlFor="spells">Spells</label>
+            <h3>Spells</h3>
             <select name="spells" id="spells" defaultValue={''}>
                 <option value="">--Not Selected--</option>
                 {spells.filter(spell => spell.level + 1 === level).map((spell, index) => 

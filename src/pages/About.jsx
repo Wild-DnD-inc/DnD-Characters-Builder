@@ -1,7 +1,7 @@
 function About() {
 
     return (
-        <main className="about">
+        <>
             <h2>A propos</h2>
             <p>Le DnD Character Builder simplifie le processus de création de personnages pour les aventures dans l'univers de Donjons et Dragons. En suivant six étapes simples, vous pouvez créer un personnage personnalisé qui correspond parfaitement à votre vision de l'aventurier ultime.</p>
             <h3>Étapes de Création</h3>
@@ -14,7 +14,7 @@ function About() {
                 <li><span>Finalisation</span>Revoyez les choix que vous avez faits tout au long du processus de création et apportez les ajustements nécessaires pour peaufiner votre personnage. Une fois que vous êtes satisfait, générez une feuille de personnage complète avec toutes les informations nécessaires pour commencer votre aventure.</li>
             </ul>
             <p>Avec le DnD Character Builder, la création de personnages pour vos parties de Donjons et Dragons devient un processus simple et intuitif, vous permettant de vous concentrer sur l'exploration, le combat et les intrigues passionnantes qui vous attendent dans cet univers fantastique.</p>
-        </main>
+        </>
     )
 
 }

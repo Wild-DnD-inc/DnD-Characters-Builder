@@ -5,12 +5,12 @@ import { StepsProvider } from "../contexts/StepsContext"
 function Home() {
 
     return (
-        <main className="perso">
+        <div className="perso">
             <StepsProvider>
                 <Steps/>
                 <Outlet/>
             </StepsProvider>
-        </main>
+        </div>
     )
 
 }

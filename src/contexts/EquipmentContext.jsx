@@ -1,8 +1,9 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react"
 
-const EquipmentContext = createContext();
+const EquipmentContext = createContext()
 
-export const EquipmentProvider = ({ children }) => {
+export function EquipmentProvider({children}) {
+
     const [primaryWeapon, setPrimaryWeapon] = useState('');
     const [secondaryWeapon, setSecondaryWeapon] = useState('');
     const [armor, setArmor] = useState('');
@@ -72,7 +73,8 @@ export const EquipmentProvider = ({ children }) => {
         }}>
             {children}
         </EquipmentContext.Provider>
-    );
-};
+    )
 
-export const useEquipment = () => useContext(EquipmentContext);
+}
+
+export const useEquipment = () => useContext(EquipmentContext)

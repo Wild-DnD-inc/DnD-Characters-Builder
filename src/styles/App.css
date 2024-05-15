@@ -12,12 +12,34 @@
   gap: 25px;
 }
 
-main.perso {
+main {
+  width: 100%;
+  height: 85%;
+  padding: 3em;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul > li {
+  margin: 1em 0;
+  list-style-type: none;
+}
+
+ul > li > span {
+  margin-right: 2em;
+  font-weight: bold;
+}
+
+div.perso {
+  width: 100%;
   display: grid;
   grid-template-columns: 20% 1fr;
 }
 
-main.perso > .steps {
+div.perso > .steps {
   padding-left: 1rem;
   border-right: 2px solid var(--secondary-color);
   display: flex;

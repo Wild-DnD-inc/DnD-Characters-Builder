@@ -1,11 +1,11 @@
-import Equipment from "../components/Equipment"
-import { EquipmentProvider } from "../contexts/EquipmentContext"
+import { EquipmentProvider } from '../contexts/EquipmentContext'
+import Equipment from '../components/Equipment'
 
 function Equipments() {
 
     return (
         <EquipmentProvider>
-            <Equipment />
+            <Equipment/>
         </EquipmentProvider>
     )
 }

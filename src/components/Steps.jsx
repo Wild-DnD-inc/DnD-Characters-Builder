@@ -7,13 +7,13 @@ function Steps() {
 
     return (
         <section className="steps">
-            <Link to="/races">Races<span>{steps.race}</span></Link>
-            <Link to="/classes">Classes<span>{steps.classe}</span></Link>
-            <Link to="/abilities">Abilities<span>{''}</span></Link>
-            <Link to="/stats">Stats<span>{''}</span></Link>
-            <Link to="/equipments">Equipments<span>{''}</span></Link>
-            <Link to="/character">Character<span>{''}</span></Link>
-            <Link to="/resume">Resume<span>{''}</span></Link>
+            <Link to="/races">Races</Link>
+            <Link to="/classes">Classes</Link>
+            <Link to="/abilities">Abilities</Link>
+            <Link to="/spells">Spells</Link>
+            <Link to="/equipments">Equipments</Link>
+            <Link to="/character">Character</Link>
+            <Link to="/resume">Resume</Link>
         </section>
     )
 

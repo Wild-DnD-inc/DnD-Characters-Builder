@@ -6,7 +6,7 @@ function Features() {
 
     return (
         <div className="features-component">
-            <label htmlFor="features">Features</label>
+            <h3>Features</h3>
             <select name="features" id="features" defaultValue={''}>
                 <option value="">--Not Selected--</option>
                 {features.map((feature, index) => 

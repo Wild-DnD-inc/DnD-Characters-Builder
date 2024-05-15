@@ -16,7 +16,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: var(--primary-color);
+  background: url(../images/back.png);
   font-family: var(--font-text);
   color: var(--text-color);
   display: flex;
@@ -33,9 +33,17 @@ h1 {
   line-height: 1.1;
 }
 
+main {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 h2 {
   font-size: 2.5em;
   line-height: 1.1;
+}
+
+h3 {
+  margin-top: 2em;
 }
 
 .choice {

@@ -1,11 +1,12 @@
 import { useAlignment } from "../contexts/AlignmentContext";
 import { useCharacter } from "../contexts/CharacterContext";
-
+import { useBackgrounds } from "../contexts/BackgroundsContext";
 
 function Character() {
-    const { alignments, selectedAlignment, handleAlignmentChange } = useAlignment();
 
+    const { alignments, selectedAlignment, handleAlignmentChange } = useAlignment();
     const { characterInfo, updateCharacterInfo } = useCharacter();
+    const { backgrounds } = useBackgrounds()
 
     const handleInputChange = (event) => {
         const { id, value } = event.target;
@@ -45,6 +46,13 @@ function Character() {
                         <textarea id="appearance" rows="4" placeholder="A quick description of your appearance" onChange={handleInputChange} value={characterInfo.appearance}></textarea>
                         <h3>Character Backstory</h3>
                         <textarea id="history" rows="8" placeholder="You can tell your story here" onChange={handleInputChange} value={characterInfo.history}></textarea>
+                        <h3>Background</h3>
+                        <select id="alignment" value={selectedAlignment} onChange={handleAlignmentChange}>
+                            <option value="">--Background--</option>
+                            {backgrounds.map((background, index) => 
+                                <option value={background.index} key={background.index}>{index + 1}. {background.name}</option>
+                            )}
+                        </select>
                 </div>
                 <div>
                     <h3>Personality traits</h3>
