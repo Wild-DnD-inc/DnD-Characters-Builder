@@ -4,7 +4,9 @@ const Avatar = ({ race, classe, gender }) => {
 
   return (
     <div>
-      <img src={imagePath} alt='Avatar of the character' />
+      <img src={race === '' && classe === '' ? './src/images/dnd-symbol.png' : imagePath} alt='Avatar of the character' className="placeholder" />
+      {console.log(race)}
+      {console.log(classe)}
     </div>
   );
 };
