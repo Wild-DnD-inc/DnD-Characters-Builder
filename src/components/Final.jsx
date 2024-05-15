@@ -1,4 +1,4 @@
-import '../Final.css'
+import '../styles/Final.css'
 import Avatar from './Avatar';
 import { useEquipment } from "../contexts/EquipmentContext";
 import { useAlignment } from '../contexts/AlignmentContext';
@@ -72,7 +72,7 @@ function Final() {
                 </div>
             </div>
     </div>
-    <div> 
+    <div className='resume-container'> 
         <h2>Resume</h2>
     <p className='resume'>
         {characterInfo.name} is a {race} {classe}. {characterInfo.gender === 'male' ? ' He' : ' She'} is {characterInfo.age} years old and has {characterInfo.hair} hair. 

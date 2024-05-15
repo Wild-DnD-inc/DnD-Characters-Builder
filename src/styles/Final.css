@@ -1,4 +1,5 @@
-.final-container {  display: grid;
+.final-container {
+    display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
@@ -8,18 +9,25 @@
       "final-image final-stuff final-stuff final-stuff";
   }
   
-  .final-image { grid-area: final-image; }
+  .final-image {
+    grid-area: final-image;
+  }
 
   .final-image img {
     margin: 20px;
     max-height: 450px ;
   }
   
-  .final-character { grid-area: final-character; }
+  .final-character {
+    grid-area: final-character;
+  }
   
-  .final-abilities { grid-area: final-abilities; }
+  .final-abilities {
+    grid-area: final-abilities;
+  }
   
-  .final-stuff {  display: grid;
+  .final-stuff {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
@@ -39,3 +47,10 @@
   
   .final-spells { grid-area: final-spells; }
   
+  .resume-container {
+    grid-column: 1 / 3;
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+    float: right;
+  }

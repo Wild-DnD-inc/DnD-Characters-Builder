@@ -15,13 +15,19 @@ function Character() {
 
 
     return (
-        <div>
-            <h2>Character</h2>
+        <div className="character-form">
             <div className="grid-container">
                 <div>
-                    <p>Define the last details of your character</p>
+                    {/* <p>Define the last details of your character</p> */}
                     <h3>Name</h3>
                     <input type="text" id="name" maxLength="24" placeholder="Character Name" onChange={handleInputChange} value={characterInfo.name}/>
+                        <h3>Background</h3>
+                        <select id="alignment" value={selectedAlignment} onChange={handleAlignmentChange}>
+                            <option value="">--Background--</option>
+                            {backgrounds.map((background, index) => 
+                                <option value={background.index} key={background.index}>{index + 1}. {background.name}</option>
+                            )}
+                        </select>
                         <h3>Gender / Alignment / Real Age</h3>
                         <select id="gender" onChange={handleInputChange} value={characterInfo.gender}>
                             <option value="male">Male</option>
@@ -42,23 +48,18 @@ function Character() {
                         <input type="text" id="eyes" maxLength="16" placeholder="Eyes" onChange={handleInputChange} value={characterInfo.eyes}/>
                         <input type="text" id="skin" maxLength="16" placeholder="Skin" onChange={handleInputChange} value={characterInfo.skin}/>
                         <input type="text" id="hair" maxLength="16" placeholder="Hair" onChange={handleInputChange} value={characterInfo.hair}/>
+                </div>
+                <div>
                         <h3>Appearance</h3>
                         <textarea id="appearance" rows="4" placeholder="A quick description of your appearance" onChange={handleInputChange} value={characterInfo.appearance}></textarea>
                         <h3>Character Backstory</h3>
                         <textarea id="history" rows="8" placeholder="You can tell your story here" onChange={handleInputChange} value={characterInfo.history}></textarea>
-                        <h3>Background</h3>
-                        <select id="alignment" value={selectedAlignment} onChange={handleAlignmentChange}>
-                            <option value="">--Background--</option>
-                            {backgrounds.map((background, index) => 
-                                <option value={background.index} key={background.index}>{index + 1}. {background.name}</option>
-                            )}
-                        </select>
-                </div>
-                <div>
                     <h3>Personality traits</h3>
                     <textarea id="traits" rows="3" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.traits}></textarea>
                     <h3>Ideals</h3>
                     <textarea id="ideals"  rows="2" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.ideals}></textarea>
+                </div>
+                <div>
                     <h3>Bonds</h3>
                     <textarea id="bonds" rows="2" placeholder="Adjective separated by a comma" onChange={handleInputChange} value={characterInfo.bonds}></textarea>
                     <h3>Flaws</h3>

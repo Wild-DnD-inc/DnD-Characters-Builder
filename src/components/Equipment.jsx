@@ -8,6 +8,7 @@ import { ArmorsProvider } from "../contexts/ArmorsContext"
 import { GearsProvider } from "../contexts/GearsContext"
 import { ToolsProvider } from "../contexts/ToolsContext"
 import { useEquipment } from "../contexts/EquipmentContext"
+import '../styles/Form.css'
 
 function Equipment() {
     const { primaryWeapon, handlePrimaryWeaponChange,
@@ -18,9 +19,7 @@ function Equipment() {
         selectedGears, handleGearChange } = useEquipment();
 
     return (
-        <>
-            <h2>Equipment</h2>
-            <p>Choose your equipment</p>
+        <div className="equipment-form">
             <div className="grid-container">
                 <div>
                     <ArmorsProvider>
@@ -46,7 +45,7 @@ function Equipment() {
                     <textarea id="particularities" rows="3"></textarea>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -3,11 +3,12 @@ import { FeaturesProvider } from "../contexts/FeaturesContext"
 import Features from "../components/Features"
 import { ProficienciesProvider } from "../contexts/ProficienciesContext"
 import Proficiencies from "../components/Proficiencies"
+import '../styles/Form.css'
 
 function Spells() {
 
     return (
-        <form>
+        <form className="spells-form">
             <Level/>
             <FeaturesProvider>
                 <Features/>
@@ -15,7 +16,6 @@ function Spells() {
             <ProficienciesProvider>
                 <Proficiencies/>
             </ProficienciesProvider>
-
         </form>
     )
 
