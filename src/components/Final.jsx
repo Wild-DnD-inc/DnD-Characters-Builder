@@ -5,6 +5,7 @@ import { useAlignment } from '../contexts/AlignmentContext';
 import { useCharacter } from '../contexts/CharacterContext';
 import { useRaces } from '../contexts/RacesContext';
 import { useClasses } from '../contexts/ClassesContext';
+import { useSteps } from '../contexts/StepsContext';
 
 function Final() {
     const { race } = useRaces();
@@ -13,17 +14,19 @@ function Final() {
     const { selectedAlignment } = useAlignment();
     const { characterInfo } = useCharacter();
     
+    const { steps } = useSteps()
  
     return (
         <>
         <div className="final-container">
             <div className="final-image">
-               <Avatar race={race} classe={classe} gender={characterInfo.gender}/>
+                {console.log(steps)}
+               <Avatar race={steps.race} classe={steps.classe} gender={characterInfo.gender}/>
             </div>
             <div className="final-character">
                 <p>Name: {characterInfo.name}</p>
-                <p>Race: </p>
-                <p>Class: </p>
+                <p>Race: {steps.race}</p>
+                <p>Class: {steps.classe}</p>
                 <p>Alignment: {selectedAlignment}</p>
             </div>
             <div className="final-abilities">
