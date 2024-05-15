@@ -1,17 +1,28 @@
 import { useAlignment } from "../contexts/AlignmentContext";
 import { useCharacter } from "../contexts/CharacterContext";
 import { useBackgrounds } from "../contexts/BackgroundsContext";
+import { useSteps } from "../contexts/StepsContext";
+import { useEffect } from "react";
 
 function Character() {
 
     const { alignments, selectedAlignment, handleAlignmentChange } = useAlignment();
     const { characterInfo, updateCharacterInfo } = useCharacter();
-    const { backgrounds } = useBackgrounds()
+    const { backgrounds } = useBackgrounds();
+    const { steps, setSteps } = useSteps();
 
     const handleInputChange = (event) => {
         const { id, value } = event.target;
-        updateCharacterInfo({ [id]: value });
+        updateCharacterInfo({ ...characterInfo, [id]: value });
     };
+
+    useEffect(() => {
+        setSteps((previousSteps) => ({
+            ...previousSteps,
+            characterInfo: characterInfo,
+            alignment: selectedAlignment
+        }));
+    }, [characterInfo,selectedAlignment, setSteps]);
 
 
     return (

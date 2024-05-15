@@ -9,6 +9,8 @@ import { GearsProvider } from "../contexts/GearsContext"
 import { ToolsProvider } from "../contexts/ToolsContext"
 import { useEquipment } from "../contexts/EquipmentContext"
 import '../styles/Form.css'
+import { useEffect } from "react"
+import { useSteps } from "../contexts/StepsContext"
 
 function Equipment() {
     const { primaryWeapon, handlePrimaryWeaponChange,
@@ -17,6 +19,20 @@ function Equipment() {
         shield, handleShieldChange,
         selectedTools, handleToolChange,
         selectedGears, handleGearChange } = useEquipment();
+    const { setSteps } = useSteps();
+
+        useEffect(() => {
+            setSteps(previousSteps => ({
+                ...previousSteps,
+                primaryWeapon,
+                secondaryWeapon,
+                armor,
+                shield,
+                selectedTools,
+                selectedGears
+            }));
+        }, [primaryWeapon, secondaryWeapon, armor, shield, selectedTools, selectedGears, setSteps]);
+    
 
     return (
         <div className="equipment-form">

@@ -5,7 +5,7 @@ const sample = {
     race: '',
     classe: '',
     abilities: {
-        strengh: {
+        strength: {
             score: 0,
             modifier: 0
         },
@@ -30,8 +30,33 @@ const sample = {
             modifier: 0
         }
     },
-    stats: '',
-    equipments: ''
+    spells: '',
+    alignment: '',
+    primaryWeapon: '',
+    secondaryWeapon: '',
+    armor: '',
+    shield: '',
+    selectedTools: '',
+    selectedGears: '',
+    characterInfo: {
+        name: "",
+        gender: "",
+        age: "",
+        height: "",
+        weight: "",
+        xp: "",
+        eyes: "",
+        skin: "",
+        hair: "",
+        appearance: "",
+        history: "",
+        traits: "",
+        ideals: "",
+        bonds: "",
+        flaws: "",
+        allies: "",
+        extraFeatures: ""
+    }
 }
 
 export function StepsProvider({children}) {
