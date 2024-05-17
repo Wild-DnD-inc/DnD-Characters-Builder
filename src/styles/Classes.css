@@ -1,0 +1,63 @@
+.classes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.classes > .card {
+    width: 175px;
+    height: 250px;
+    background-position: 50%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.barbarian {
+    background: url(../assets/classes/barbarian.png);
+}
+
+.bard {
+    background: url(../assets/classes/bard.png);
+}
+
+.cleric {
+    background: url(../assets/classes/cleric.png);
+}
+
+.druid {
+    background: url(../assets/classes/druid.png);
+}
+
+.fighter {
+    background: url(../assets/classes/fighter.png);
+}
+
+.monk {
+    background: url(../assets/classes/monk.png);
+}
+
+.paladin {
+    background: url(../assets/classes/paladin.png);
+}
+
+.ranger {
+    background: url(../assets/classes/ranger.png);
+}
+
+.rogue {
+    background: url(../assets/classes/rogue.png);
+}
+
+.sorcerer {
+    background: url(../assets/classes/sorcerer.png);
+}
+
+.warlock {
+    background: url(../assets/classes/warlock.png);
+}
+
+.wizard {
+    background: url(../assets/classes/wizard.png);
+}

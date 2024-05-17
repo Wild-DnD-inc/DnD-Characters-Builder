@@ -1,0 +1,51 @@
+.races {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.races > .card {
+    width: 175px;
+    height: 250px;
+    background-position: 50%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.dragonborn {
+    background: url(../assets/races/dragonborn.png);
+}
+
+.dwarf {
+    background: url(../assets/races/dwarf.png);
+}
+
+.elf {
+    background: url(../assets/races/elf.png);
+}
+
+.gnome {
+    background: url(../assets/races/gnome.png);
+}
+
+.half-elf {
+    background: url(../assets/races/half-elf.png);
+}
+
+.half-orc {
+    background: url(../assets/races/half-orc.png);
+}
+
+.halfling {
+    background: url(../assets/races/halfling.png);
+}
+
+.human {
+    background: url(../assets/races/human.png);
+}
+
+.tiefling {
+    background: url(../assets/races/tiefling.png);
+}

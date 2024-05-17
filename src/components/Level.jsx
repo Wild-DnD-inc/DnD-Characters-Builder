@@ -20,7 +20,7 @@ function Level() {
     return (
         <>
             <div className="level-component">
-                <label htmlFor="level">Level</label>
+                <h3>Level</h3>
                 <div className="content">
                     <input type="number" name="level" id="level" min={1} max={20} value={state.count} onChange={(event) => setLevel(event.target.value)}/>
                     <button type="button" onClick={() => dispatch({type: 'decrement'})} disabled={state.count === 1}>-</button>

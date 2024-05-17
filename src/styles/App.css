@@ -1,0 +1,64 @@
+.equipment {
+  margin-bottom: 10px;
+}
+
+.block {
+  display: block;
+}
+
+main {
+  width: 100%;
+  height: 85%;
+  padding: 3em;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul > li {
+  margin: 1em 0;
+  list-style-type: none;
+}
+
+ul > li > span {
+  margin-right: 2em;
+  font-weight: bold;
+}
+
+div.perso {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+}
+
+div.perso > .steps {
+  padding-left: 1rem;
+  border-right: 2px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.steps > a {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-dnd);
+  font-size: 1.25em;
+  font-weight: 600;
+  color: var(--text-color);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  text-decoration: none;
+  transition: bacground-color 0.25s;
+  cursor: pointer;
+}
+  .steps > a:hover,
+  .steps > a:focus {
+    background: var(--secondary-color);
+  }
+  .steps span {
+    float: right;
+  }
